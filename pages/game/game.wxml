@@ -1,0 +1,23 @@
+<!--game.wxml-->
+<view class="container layout">
+  <view class="top-bar">
+    <view class="score">得分:{{score}}</view>
+    <view class="timer">{{seconds}}</view>
+    <view class="pause">
+      <button class="btn-pause" hover-class="btn-pause-active" size="mini" bindtap="toPause">暂停</button>
+    </view>
+  </view>
+  <view class="game">
+    <block wx:for="{{colors}}" wx:for-item="i">
+      <view class="grid cb-{{cube}}" style="background: {{i.color}}" data-next="{{i.next}}" bindtap="goNext"></view>
+    </block>
+  </view>
+  <view class="ps-modal text-center" hidden="{{!pause}}">
+    <view class="ps-tips">
+      <text>游戏暂停</text>
+    </view>
+    <view class="ps-off">
+      <button class="g-btn" hover-class="g-btn-active" bindtap="toContinue">继续游戏</button>
+    </view>
+  </view>
+</view>

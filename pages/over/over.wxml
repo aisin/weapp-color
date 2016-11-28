@@ -1,0 +1,12 @@
+<!--over.wxml-->
+<view class="container layout text-center">
+  <view class="hd">
+    <text>经鉴定，您是：</text>
+  </view>
+  <view class="level">
+    <text>{{level}}</text>
+  </view>
+  <view class="again">
+    <button class="g-btn" hover-class="g-btn-active" bindtap="goAgain">再玩一次</button>
+  </view>
+</view>

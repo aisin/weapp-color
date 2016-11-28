@@ -1,0 +1,14 @@
+/**index.wxss**/
+
+.hd{
+  color: #fff;
+  margin-top: 200rpx;
+  font-size: 50rpx;
+  text-shadow: 1px 1px 1px #AB3C3C;
+}
+
+.bd{
+  color: #f9bdbd;
+  margin-top: 100rpx;
+  font-size: 36rpx;
+}

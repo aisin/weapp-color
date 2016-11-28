@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container layout text-center">
+  <view class="hd">
+    <text>识色</text>
+  </view>
+  <view class="bd">
+    <text>找出所有色块里颜色不同的一个</text>
+  </view>
+  <view class="go-box">
+    <button class="g-btn" hover-class="g-btn-active" bindtap="toGo">开始游戏</button>
+  </view>
+</view>
