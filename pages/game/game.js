@@ -98,7 +98,6 @@ const pageData = {
       next: false
     }, 0, colorAry.length);
 
-    this.data.level = 'cb-' + cube;
     let oneIndex = Math.floor(Math.random() * total);
 
     colorAry[oneIndex] = {
@@ -108,6 +107,7 @@ const pageData = {
 
     this.setData({
       cube: cube,
+      level: 'cb-' + cube,
       colors: colorAry
     });
   }
