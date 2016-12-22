@@ -8,7 +8,7 @@
     </view>
   </view>
   <view class="game">
-    <block wx:for="{{colors}}" wx:for-item="i">
+    <block wx:for="{{colors}}" wx:for-item="i" wx:key="i">
       <view class="grid cb-{{cube}}" style="background: {{i.color}}" data-next="{{i.next}}" bindtap="goNext"></view>
     </block>
   </view>

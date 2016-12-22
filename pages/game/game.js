@@ -26,7 +26,7 @@ const pageData = {
   // 下一关
   goNext: function (e) {
     let next = e.currentTarget.dataset.next;
-    if (next === 'true') {
+    if (next) {
       this.setData({
         score: this.data.score + 1
       });
