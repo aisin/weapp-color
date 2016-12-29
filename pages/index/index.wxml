@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container layout text-center">
   <view class="hd">
-    <text>识色</text>
+    <text>看你有多色</text>
   </view>
   <view class="bd">
     <text>找出所有色块里颜色不同的一个</text>

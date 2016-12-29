@@ -1,8 +1,4 @@
 const pageData = {
-    data: {
-        level: ''
-    },
-
     onShow: function(){
         let app = getApp();
         let level = app.level;

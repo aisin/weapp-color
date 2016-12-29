@@ -4,11 +4,22 @@ const app = getApp();
 
 const pageData = {
   data: {
+    width: 0,
     score: 0,
     colors: [],
     cube: 2,
     seconds: 60,
     pause: false
+  },
+
+  onLoad: function () {
+    wx.getSystemInfo({
+      success: (res) => {
+        this.setData({
+          width: res.windowWidth
+        });
+      }
+    });
   },
 
   onShow: function () {
@@ -87,27 +98,30 @@ const pageData = {
 
   // 数据准备 & 渲染
   _ren: function () {
+    let width = this.data.width;
     let score = this.data.score;
     let round = grids(score);
     let cube = round.cube;
     let total = cube * cube;
     let colorAry = new Array(total);
+    let size = Math.floor(width / cube);
 
     colorAry.fill({
       color: round.mainColor,
-      next: false
+      next: false,
+      size: size
     }, 0, colorAry.length);
 
     let oneIndex = Math.floor(Math.random() * total);
 
     colorAry[oneIndex] = {
       color: round.oneColor,
-      next: true
+      next: true,
+      size: size
     };
 
     this.setData({
       cube: cube,
-      level: 'cb-' + cube,
       colors: colorAry
     });
   }
